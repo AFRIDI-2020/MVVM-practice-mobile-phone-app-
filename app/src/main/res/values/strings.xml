@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Mobile Phone</string>
+
+    <!-- activity_mobile_list -->
+    <string name="mobile_list_headline">Mobile List</string>
+    <string name="intentTOAndroidActivity">Android versions</string>
+
+    <!-- mobile_item.xml -->
+    <string name="brand_name">Brand name</string>
+    <string name="model_name">Model name</string>
+    <string name="label_price">Price:</string>
+    <string name="amount">0</string>
+    <string name="currency">Tk.</string>
+
+    <!-- input_mobile_item.xml-->
+    <string name="hint_brand_name">Write mobile brand name</string>
+    <string name="hint_model_name">Write brand model</string>
+    <string name="hint_price">Write mobile price</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- activity_android_version.xml -->
+    <string name="hint_android_version">Android version</string>
+    <string name="hint_android_version_name">Version name</string>
+    <string name="hint_api_level">Api level</string>
+    <string name="button_text_add_android_version">Add</string>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="androidVersionsViewModel"
+            type="com.example.mobilephone.android_version_activity.AndroidVersionsViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        tools:context=".android_version_activity.AndroidVersionsActivity">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/android_version_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_android_version"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@={androidVersionsViewModel.androidVersion}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/android_version_name_ET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_android_version_name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@={androidVersionsViewModel.versionName}"
+            app:layout_constraintTop_toBottomOf="@id/android_version_ET" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/api_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_api_level"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@={androidVersionsViewModel.apiLevel}"
+            app:layout_constraintTop_toBottomOf="@id/android_version_name_ET" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_android_version_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/purple_500"
+            android:elevation="10dp"
+            android:text="@string/button_text_add_android_version"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:onClick="@{androidVersionsViewModel::addAndroidVersionButtonClick}"
+            app:layout_constraintEnd_toEndOf="@id/api_level"
+            app:layout_constraintTop_toBottomOf="@id/api_level" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/android_version_RV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/add_android_version_button" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

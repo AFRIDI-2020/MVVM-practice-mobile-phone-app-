@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/brand_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/brand_name_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_brand_name"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_brand_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_model_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/model_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/brand_name_ET" />
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/model_name_ET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_model_name"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/label_model_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/label_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/model_name_ET" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/price_ET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:hint="@string/hint_price"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/currency"
+        app:layout_constraintStart_toStartOf="@id/label_price"
+        app:layout_constraintTop_toBottomOf="@id/label_price" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/currency"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/label_price" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ok_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="@string/ok"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/price_ET" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/cancel_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:padding="5dp"
+        android:text="@string/cancel"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/ok_TV"
+        app:layout_constraintTop_toTopOf="@id/ok_TV" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
